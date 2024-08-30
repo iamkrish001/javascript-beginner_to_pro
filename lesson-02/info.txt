@@ -1,0 +1,14 @@
+operator precedence
+/ *
++ - 
+goes from left to right in case of same precedence 
+
+
+weird problem of js
+doesn't give accurate float accurate values
+0.3 + 0.7 = 1.00000000000000000000000000
+
+
+Math.round()
+math.ceil(upper value)
+math.floor(lower value)
