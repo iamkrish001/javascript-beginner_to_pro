@@ -1,0 +1,38 @@
+concatenation
+string add
+'k' + 'r' = kr      this is an example of string concatenation
+
+
+TYPEOF keyword
+typeof 'hello'
+replies string
+
+
+TYPE conversion
+'my' + 3
+=> my3
+--> automatically converts type to string
+
+
+ADDITION
+adds from left to right
+
+CALCULATION OF MONEY
+always in cents and divide by 100
+
+
+ways of creating strings
+1. single quote
+2. double quote , use double quote only when there is an single quote inside a string . For example I'm learning JS
+3. back tick `` also called template strings
+
+FEATURES OF TEMPLATE strings
+1.interpolation = insert values betn strings , much cleaner for inserting values
+2. multi line strings = use ` template strings always 
+
+
+
+`Items( ${1+1} )` , prints Items (2)   
+
+Escape character = \' ( creates a single quote)  \" ( creates double) 
+I\'m learning JS
