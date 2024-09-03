@@ -1,0 +1,25 @@
+var is used to start some values
+VAR IN JS
+
+
+  // let is the keyword for variable declaration 
+        // cannot use special characters or numbers expecr $ or _
+        
+semicolon separates the line 
+js follows semicolon insertion , means inserts the semicolon at last of line of code
+
+
+Increment and decrement best practice 
+number+=1 ~ number + 1 
+number-=1 ~ numbwe -1 
+
+
+naming conventions
+camelCase 
+PascalCase
+kebab-case 
+snake_case
+
+ways of creating variables
+let 
+const , used to constant values

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="buttons">
+    <p class="first-row">
+        <button  onclick="one()">1</button>
+        <button onclick="two()">2</button>
+        <button  onclick="three()">3</button>
+        <button onclick="plus()">+</button>
+       
+    </p>
+    <p class="second-row">
+        <button  onclick="four()">4</button>
+        <button  onclick="five()">5</button>
+        <button  onclick="six()">6</button>
+        <button onclick="minus()">-</button>
+      
+    </p>
+    <p class="third-row">
+        <button  onclick="seven()">7</button>
+        <button onclick="eight()">8</button>
+        <button  onclick="nine()">9</button>
+        <button  onclick="multiply()">*</button>
+      
+    </p>
+    <p class="last-row">
+        <button  onclick="zero()">0</button>
+        <button  onclick="dot()">.</button>
+        <button onclick="evaluation()">=</button> 
+        <button  onclick="slash()">/</button> 
+      
+      
+    </p>
+    </div>
+    <script>
+        let calculation = ``; 
+
+        function one(){
+            calculation+=`1` ; 
+            console.log(calculation) ;
+        }
+        function two(){
+            calculation+=`2` ; 
+            console.log(calculation) ;
+        }
+        function three(){
+            calculation+=`3` ; 
+            console.log(calculation) ;
+        }
+        function plus(){
+            calculation+=` + ` ; 
+            console.log(calculation) ;        
+        }
+
+        function four(){
+            calculation+=`4` ; 
+            console.log(calculation) ;
+        }
+        function five(){
+            calculation+=`5` ; 
+            console.log(calculation) ;
+        }
+        function six(){
+            calculation+=`6` ; 
+            console.log(calculation) ;
+        }
+        function minus(){
+            calculation+=`-` ; 
+            console.log(calculation) ;
+        }
+        function seven(){
+            calculation+=`7` ; 
+            console.log(calculation) ;
+        }
+        function eight(){
+            calculation+=`8` ; 
+            console.log(calculation) ;
+        }
+        function nine(){
+            calculation+=`9` ; 
+            console.log(calculation) ;
+        }
+        function multiply(){
+            calculation+=`*` ; 
+            console.log(calculation) ;
+        }
+        function zero(){
+            calculation+=`0` ; 
+            console.log(calculation) ;
+        }
+        function dot(){
+            calculation+=`.` ; 
+            console.log(calculation) ;
+        }
+        function slash(){
+            calculation+=`/` ; 
+            console.log(calculation) ;
+        }
+
+        function evaluation(){
+          calculation = eval(calculation); // converts strings into actual math
+            console.log(calculation); 
+        }
+    </script>
+</body>
+</html>
