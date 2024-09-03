@@ -6,6 +6,45 @@
     <title>Cart Quantity</title>
 </head>
 <body>
-    
+    <h3>Cart quantity</h3>
+    <div class="buttons">
+        <button class="show-quantity" onclick="show()">
+Show Quantity
+        </button>
+        <button class="add-to-cart" onclick="add()">Add to cart</button>
+        <button class="2" onclick="addtwo()">+2</button>
+        <button class="3 " onclick="addthree()">+3</button>
+        <button class="reset-cart" onclick="delete_all()">
+            Reset Cart
+        </button>
+    </div>
+    <script>
+        let number = 0 
+     function show(){
+        console.log(`Cart quantity is  ${number}`) ; 
+      };
+
+      function add(){
+        number = number + 1; 
+        console.log(`Car tquantity is  ${number}`) ; 
+      };
+
+      function addtwo(){
+        number = number + 2; 
+        console.log(`Cart quantity is  ${number}`) ; 
+      };
+
+      function addthree(){
+        number = number + 3; 
+        console.log(`Cart quantity is  ${number}`) ; 
+      };
+
+      function delete_all(){
+        number = 0 ; 
+        console.log("Cart was reset");
+        console.log("Cart quantity : 0 ");
+      }; 
+
+    </script>
 </body>
 </html>
