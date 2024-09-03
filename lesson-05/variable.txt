@@ -6,4 +6,9 @@ VAR IN JS
         // cannot use special characters or numbers expecr $ or _
         
 semicolon separates the line 
-js follows semicolon insertion , means inserts the semicolon at last of line of code       
+js follows semicolon insertion , means inserts the semicolon at last of line of code
+
+
+Increment and decrement best practice 
+number+=1 ~ number + 1 
+number-=1 ~ numbwe -1 
