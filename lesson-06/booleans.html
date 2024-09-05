@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      /* booleans values are only TRUE and FALSE
+        represents whether sth is true of false
+        representation , true and false
+        */
+      console.log(34543 > 5434);
+      console.log(typeof false);
+      console.log(3 <= -5);
+      console.log(33 == 33); // tries to convert both into same datatype
+      console.log(33 == "33"); // not a good idea
+      console.log(23 === 23.0); // equals
+      console.log(42 < 4 * 23); // first of all 4*23 is calculated because of the priority of operations
+      console.log(23 !== "23"); // uses double equals to for improving accuracy
+
+      // if else statements
+      if (23 !== "23") {
+        console.log(`you're right`); // called branches
+
+        if (true) {
+          console.log("23456");
+        }
+        if (false) {
+          console.log("23456");
+        } else {
+          console.log("the value is false");
+        }
+      }
+
+      // checking whether if so is old enough to drive
+      let age = 17;
+      let name = "krish";
+      if (age >= 18) {
+        console.log("you can drive");
+        console.log("congrats");
+      } else if (name === "krish") {
+        console.log("you can drive anything");
+      } else {
+        console.log("too young to drive");
+      }
+    </script>
+  </body>
+</html>
