@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <h3>Cart quantity</h3>
+    <div class="buttons" style="display: flex">
+      <button class="show-quantity" onclick="show()">Show Quantity</button>
+      <button class="add-to-cart" onclick="add()">Add to cart</button>
+      <button class="2" onclick="addtwo()">+2</button>
+      <button class="3" onclick="addthree()">+3</button>
+      <button class="-2" onclick="minustwo()">-2</button>
+      <button class="-3" onclick="minusthree()">-3</button>
+      <button class="reset-cart" onclick="delete_all()">Reset Cart</button>
+    </div>
+    <script>
+      let cartQuantity = 0;
+      const maxCartQuantity = 10;
+
+      function show() {
+        console.log(`Cart quantity is  ${cartQuantity}`);
+      }
+
+      function add() {
+        cartQuantity >= maxCartQuantity
+          ? alert("Cart cannot exceed 10 elements")
+          : cartQuantity++;
+
+        console.log(`Cart quantity is  ${cartQuantity}`);
+      }
+
+      function addtwo() {
+        cartQuantity >= maxCartQuantity
+          ? alert("Cart cannot exceed 10 elements")
+          : (cartQuantity += 2);
+        console.log(`Cart quantity is  ${cartQuantity}`);
+      }
+
+      function addthree() {
+        cartQuantity+3 <=  maxCartQuantity
+          ? (cartQuantity += 3) : alert("Cart cannot exceed 10 elements"); 
+          
+        console.log(`Cart quantity is  ${cartQuantity}`);
+      }
+
+      function minustwo() {
+        cartQuantity <= 0
+          ? alert("quantity cannot be less than 0")
+          : (cartQuantity -= 2);
+        console.log(`Cart Quantity is ${cartQuantity}`);
+      }
+
+      
+      function minusthree() {
+        cartQuantity <= 0
+          ? alert("quantity cannot be less than 0")
+          : (cartQuantity -= 3);
+        console.log(`Cart Quantity is ${cartQuantity}`);
+      }
+
+      function delete_all() {
+        cartQuantity = 0;
+
+        console.log("Cart was reset");
+        console.log("Cart quantity : 0 ");
+      }
+    </script>
+  </body>
+</html>
