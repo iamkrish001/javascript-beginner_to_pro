@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock , Paper , Scissors</title>
+  </head>
+  <body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="rock()">Rock</button>
+    <button onclick="paper()">Paper</button>
+    <button onclick="scissors()">Scissors</button>
+    <script>
+      function rock() {
+        let computerMove = ""; // variables of same name can be accessed by declaring outside the attribute
+        let randomNum = Math.random();
+        if (randomNum >= 0 && randomNum < 1 / 3) {
+          computerMove = "rock";
+          console.log(computerMove);
+        } else if (randomNum >= 1 / 3 && randomNum < 2 / 3) {
+          computerMove = "paper";
+          console.log(computerMove);
+        } else {
+          computerMove = "scissors";
+          console.log(computerMove); // scope helps us to declare a variable inside curly bracket and limits the value of variable only inside it.
+        }
+        let result = ""; //declaration of global var
+        if (computerMove === "rock") {
+          result = "Tied";
+        } else if (computerMove === "paper") {
+          result = "You lose";
+        } else if (computerMove === "scissors") {
+          result = "You won";
+        }
+
+        alert(`You picked rock, Computer picked ${computerMove} , ${result}`);
+      }
+
+      function paper() {
+        let computerMove = "";
+        let randomNum = Math.random();
+        if (randomNum >= 0 && randomNum < 1 / 3) {
+          computerMove = "rock";
+          console.log(computerMove);
+        } else if (randomNum >= 1 / 3 && randomNum < 2 / 3) {
+          computerMove = "paper";
+          console.log(computerMove);
+        } else {
+          computerMove = "scissors";
+          console.log(computerMove);
+        }
+        let result = ""; //declaration of global var
+        if (computerMove === "paper") {
+          result = "Tied";
+        } else if (computerMove === "scissors") {
+          result = "You lose";
+        } else if (computerMove === "rock") {
+          result = "You won";
+        }
+
+        alert(`You picked paper, Computer picked ${computerMove} , ${result}`);
+      }
+
+      function scissors() {
+        let computerMove = "";
+        let randomNum = Math.random();
+        if (randomNum >= 0 && randomNum < 1 / 3) {
+          computerMove = "rock";
+          console.log(computerMove);
+        } else if (randomNum >= 1 / 3 && randomNum < 2 / 3) {
+          computerMove = "paper";
+          console.log(computerMove);
+        } else {
+          computerMove = "scissors";
+          console.log(computerMove);
+        }
+        let result = ""; //declaration of global var
+        if (computerMove === "scissors") {
+          result = "Tied";
+        } else if (computerMove === "rock") {
+          result = "You lose";
+        } else if (computerMove === "paper") {
+          result = "You won";
+        }
+
+        alert(
+          `You picked scissors, Computer picked ${computerMove} , ${result}`
+        );
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booleans</title>
+  </head>
+  <body>
+    <script>
+      /* booleans values are only TRUE and FALSE
+        represents whether sth is true of false
+        representation , true and false
+        
+      console.log(34543 > 5434);
+      console.log(typeof false);
+      console.log(3 <= -5);
+      console.log(33 == 33); // tries to convert both into same datatype
+      console.log(33 == "33"); // not a good idea
+      console.log(23 === 23.0); // equals
+      console.log(42 < 4 * 23); // first of all 4*23 is calculated because of the priority of operations
+      console.log(23 !== "23"); // uses double equals to for improving accuracy
+
+      // if else statements
+      if (23 !== "23") {
+        console.log(`you're right`); // called branches
+
+        if (true) {
+          console.log("23456");
+        }
+        if (false) {
+          console.log("23456");
+        } else {
+          console.log("the value is false");
+        }
+      }
+
+      // checking whether if so is old enough to drive
+      let age = 17;
+      let name = "krish";
+      if (age >= 18) {
+        console.log("you can drive");
+        console.log("congrats");
+      } else if (name === "krish") {
+        console.log("you can drive anything");
+      } else {
+        console.log("too young to drive");
+      } 
+
+// TRUTHY AND FALSY VALUES
+
+if (6){
+  console.log('truthy'); 
+}
+
+if(!0){
+  console.log('truthy')
+}
+
+// used to easen the conditional behaviour
+// for example , cart quantity
+let cartQuantity = 7 ;
+if (cartQuantity){
+  console.log("cart has products") ; // I do not have to compare the quantity, simply if quantity is not 0 , it has products
+
+}
+
+// list of falsy values   [ false 0 '' Nan(not a num)  undefined Null ]
+
+  console.log('')
+
+  console.log('er'*4)
+  let variable23 ;  // const var23 = undefined
+console.log(variable23) // is not declared
+
+*/
+
+//Short cuts of if else
+//ternary operator ? :
+true ? console.log('truthy') : console.log('falsy');
+const result = 4>2 ? true : false ; 
+console.log(result)
+
+// guard operator  && 
+// if first condition is false
+// false && value2 , doesn't even run the code on the right . Called short-circuit evaluation 
+
+const check = false && alert('haha') ; // doesn't run at all
+console.log(check)
+
+
+// default opeator || 
+// true || value2 , short cuircuits the 2nd value 
+
+/* const currency = 'EUR' || 'USD' ; 
+console.log(currency)  short circuits USD and prints eur */
+currency = '' || 'USD' ;
+console.log(currency) ; // prints usd
+    </script>
+  </body>
+</html>
