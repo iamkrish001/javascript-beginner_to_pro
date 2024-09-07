@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+        // types of function
+        // function with no return statements
+        function sayMyname(){
+            console.log("my name is krish") ; 
+        }
+        sayMyname() ; 
+        sayMyname() ;  // function call
+     
+        // function with return statement gets a value out of a function 
+        function returnValue(){
+           
+           return 'the value is returned'
+          
+        }
+        console.log(returnValue())
+        function addTwoNumbers(){
+            return 2+2; 
+        }
+       result = addTwoNumbers() ;
+       console.log(result) // 4 
+
+       // function with parameters lets a value to put into a function
+       function myDreamCar(carname){ // takes a parameter
+        console.log(`My dream car is ${carname}`);
+       }
+       myDreamCar('Mercedes AMG GT63 S'); // passing a value to the function 
+       myDreamCar('Lamborghini Aventador SVJ');
+
+       // function with multiple parameters
+       function addTwoNum(num1, num2){
+        console.log(`addition of two numbers are ${num1+num2}`) ;
+       }
+       addTwoNum(2,3); 
+       addTwoNum(2,4); 
+       addTwoNum(2,7); 
+
+       function vehicleTaxCalculator(brand, price,  taxpercent=223/100){
+        let actualtax = (price * taxpercent) ; 
+        console.log(`Actual price of ${brand} worth ${price} after tax percent ${taxpercent} is ${actualtax}`) ; 
+       }
+       vehicleTaxCalculator('Mercedes AMG GT63 S', 30000000) // default parameter value if not mentioned used the value at the parameter
+    </script>
+</body>
+</html>
