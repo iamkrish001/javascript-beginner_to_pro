@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson-07 exercise</title>
+  </head>
+  <body>
+    <script>
+      function greet(name) {
+        console.log(`Hello ${name}`);
+      }
+      // displays hello undefined cause of not arguments passed
+      greet();
+      if (!name) {
+        // since undefined is a falsy value , so this scope will execute
+        greet("there");
+      }
+      greet("Ram");
+      greet("Jack");
+
+      function convertToFahrenheit(celsius) {
+        Fahrenheit = (celsius * 9) / 5 + 32;
+        return Fahrenheit;
+      }
+      console.log(convertToFahrenheit(25));
+
+      function convertToCelsius(Fahrenheit) {
+        Celsius = ((Fahrenheit - 32) * 5) / 9;
+        return Celsius;
+      }
+      console.log(convertToCelsius(86));
+
+      function convertTemperature(degrees, unit) {
+        if (unit === "C") {
+          convertToFahrenheit(degrees);
+          return `${Fahrenheit}F`;
+        } else if (unit === "F") {
+          convertToCelsius(degrees);
+          return `${Celsius}C`;
+        }
+      }
+      console.log(convertTemperature(36, "C"));
+      console.log(convertTemperature(86, "F"));
+
+      let unit = '' ;
+      // convertlength
+      function convertLength(length, from, to) {
+        if (from === "km" && to === "miles") {
+          miles = (1 / 1.6) * length;
+          return `${miles} miles`;
+        } else if (from === "miles" && to === "km") {
+          km = 1.6 * length;
+          return `${km} km`;
+        }
+        else if (from === "km" && to === "feet") {
+            feet = 3281 * length;
+            return `${feet} feet`;
+          } 
+          else if (from === "miles" && to === "feet") {
+            feet = 5280 * length;
+            return `${feet} feet`;
+          } 
+           else if (from === "km" && to === "km") {
+          km = 1 * length;
+          return `${km} km`;
+        }
+        else if (from === "miles" && to === "miles") {
+            miles = 1 * length;
+            return `${miles} miles`;
+          }
+
+          else if(!unit) { // unit is of falsy type 
+            return (`Invalid Unit ${from } and ${to}`)
+          }
+      }
+      console.log(convertLength(50, "miles", "km"));
+      console.log(convertLength(32, "km", "miles"));
+      console.log(convertLength(5, "km", "feet"));
+      console.log(convertLength(5, "miles", "feet"));
+      console.log(convertLength(32, "km", "km"));
+      console.log(convertLength(35, "miles", "miles"));
+      console.log(convertLength(35, "lbs", "g"));
+
+
+    </script>
+
+  </body>
+</html>
