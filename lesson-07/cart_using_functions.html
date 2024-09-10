@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <h3>Cart quantity</h3>
+    <div class="buttons" style="display:flex">
+      <button class="show-quantity" onclick="show()">Show Quantity</button>
+      <button class="add-to-cart" onclick="updateCartCalc(1)">Add to cart</button>
+      <button class="2" onclick="updateCartCalc(2)">+2</button>
+      <button class="3" onclick="updateCartCalc(3)">+3</button>
+      <button class="-2" onclick="updateCartCalc(-2)">-2</button>
+      <button class="-3" onclick="updateCartCalc(-3)">-3</button>
+      <button class="reset-cart" onclick="delete_all()">Reset Cart</button>
+    </div>
+    <script>
+
+      let cartQuantity = 0;
+      const maxCartQuantity = 10;
+        let change = 0  ; 
+
+    function updateCartCalc(change){
+          if(cartQuantity>=10) {
+            
+            console.log(`Cart is full. Quantity count ${cartQuantity}`);
+
+          }
+          else if(cartQuantity <= 0){
+           
+            console.log(`Cart is empty. Quantity count ${cartQuantity}`)
+          } 
+          else {
+          
+          cartQuantity= cartQuantity +  change ; 
+            console.log(`Cart quantity is ${cartQuantity}`); 
+          }
+    }
+
+
+      function show() {
+        console.log(`Cart quantity is  ${cartQuantity}`);
+      }
+
+   
+
+      function delete_all() {
+        cartQuantity = 0;
+
+        console.log("Cart was reset");
+        console.log("Cart quantity : 0 ");
+      }
+    </script>
+  </body>
+</html>
