@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator-resume</title>
+</head>
+<body>
+    <div class="buttons">
+    <p class="first-row">
+        <button  onclick="   Calc(1) ">1</button>
+        <button onclick=" Calc(2) ">2</button>
+        <button  onclick="Calc(3)">3</button>
+        <button onclick="Calc(`+`)">+</button>
+       
+    </p>
+    <p class="second-row">
+        <button  onclick="Calc(4)">4</button>
+        <button  onclick="Calc(5)">5</button>
+        <button  onclick="Calc(6)">6</button>
+        <button onclick="Calc(`-`)">-</button>
+      
+    </p>
+    <p class="third-row">
+        <button  onclick="Calc(7)">7</button>
+        <button onclick="Calc(8)">8</button>
+        <button  onclick="Calc(9)">9</button>
+        <button  onclick="Calc(`*`)">*</button>
+      
+    </p>
+    <p class="last-row">
+        <button  onclick="Calc(0)">0</button>
+        <button  onclick="Calc(`.`)">.</button>
+        <button onclick="evaluation()">=</button> 
+        <button  onclick="Calc(`/`)">/</button> 
+      
+      
+    </p>
+    </div>
+    <script>
+        let calculation = ``;
+        let operation = `` ; 
+          
+     function Calc(operation){
+        calculation += `${operation}` ; 
+        console.log(calculation) ;  
+     }
+    
+
+        function evaluation(){
+          calculation = eval(calculation); // converts strings into actual math
+              console.log(calculation);   //  console.log(result);  we can also declare another variable but the calculation is auto updated 
+        }
+    </script>
+</body>
+</html>
