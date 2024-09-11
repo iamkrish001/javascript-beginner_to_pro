@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        vorname: "Krish",  // property value pair
+        nachname: "Bhurtel",
+      }; // object
+      console.log(product); // object lets us group values together
+      console.log(`Mein Name ist ${product.vorname}`);
+      console.log(product.nachname); // accessing the property using dot notation 
+      product.vorname = 'Aman' ;
+      console.log(product.vorname)  ; // changing the values 
+
+      product.age = 17 ;  // adding new property to the object
+      console.log(product) ; 
+     delete product.age ; // delete a property of an object
+     console.log(product) ; 
+
+     // checking the type of object
+     console.log(typeof(product)) ; 
+    </script>
+  </body>
+</html>
