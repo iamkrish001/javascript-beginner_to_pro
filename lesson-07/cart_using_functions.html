@@ -25,19 +25,30 @@
 
         function show(){
           console.log(`The cart quantity is ${cartQuantity}`) ; 
+        alert(`The cart quantity is ${cartQuantity}`) ; 
         }
 
     function updateCartCalc(change){
-          if(cartQuantity+change>10) {            
+     
+       if(cartQuantity+change>10) {            
             console.log(`Cart is full. Quantity count ${cartQuantity}`);
+            alert(`Cart is full. Quantity count ${cartQuantity}`);
+            
+            return alert(`Cart quantity is invalid`) ; 
 
           }
           else if(cartQuantity+change < 0){           
             console.log(`Cart is empty. Quantity count ${cartQuantity}`)
+            alert(`Cart is empty. Quantity count ${cartQuantity}`)
+            return alert(`Cart quantity is invalid`) ; 
+
           } 
+     
           else {        
           cartQuantity = cartQuantity +  change ; 
-            console.log(`Cart quantity is ${cartQuantity}`); 
+          console.log(`Cart quantity is ${cartQuantity}`); 
+           alert(`Cart quantity is ${cartQuantity}`); 
+           
           }
     }
 
@@ -46,7 +57,9 @@
         cartQuantity = 0;
 
         console.log("Cart was reset");
-        console.log("Cart quantity : 0 ");
+       alert("Cart was reset");
+       console.log("Cart quantity : 0 ");
+        alert("Cart quantity : 0 ");
       }
     </script>
   </body>
