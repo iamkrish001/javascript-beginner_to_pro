@@ -58,6 +58,34 @@
      // example of method
      console.log(typeof(console.log)) ; // console = object 
      console.log(typeof(Math.random)); 
+
+     /* Built in objects  for ex : console
+      more built in objects
+      JSON = js obj notation , is basically a syntax
+      why json instead of js obj ? 
+      json can be understood by every programming language, universal
+      used when we have to store data
+
+
+      */
+
+      // convert our product2 to json
+      
+      console.log(JSON.stringify(product2)) // stringify is a method of json 
+      // json doesnot support function 
+
+      // conversion from json to js obj
+      const jsonValue = JSON.parse(JSON.stringify(product2))
+      console.log(jsonValue) // converted to js obj
+
+      /* BUILT IN OBJECT Local Storage 
+     
+      */
+
+      console.log(localStorage.getItem('task')); // used to display the message
+
+
+      localStorage.setItem('task', 'to code till midnight')  // key , value 
     </script>
   </body>
 </html>
