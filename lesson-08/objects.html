@@ -23,7 +23,7 @@
      console.log(product) ; 
 
      // checking the type of object
-     console.log(typeof(product))*/
+     console.log(typeof(product))
 
       // ways of accessing a value of an obj
       const product2 = {
@@ -67,7 +67,7 @@
       used when we have to store data
 
 
-      */
+      
 
       // convert our product2 to json
       
@@ -80,12 +80,59 @@
 
       /* BUILT IN OBJECT Local Storage 
      
-      */
+   
 
       console.log(localStorage.getItem('task')); // used to display the message
 
 
       localStorage.setItem('task', 'to code till midnight')  // key , value 
-    </script>
+
+
+      localStorage.setItem('naam', 'krish')
+    meroName = localStorage.getItem('naam')
+    console.log(`mero name ${meroName} ho`) 
+     // the value is set firstly in the local storage
+
+    // JSON.stringify  
+     */
+
+     // AUTO BOXING IN JS , strings have methods and functions
+    console.log('string'.length) // prints out the length of string 
+    console.log('string'.concat('myname'))
+    console.log('string'.indexOf('i'))
+
+
+    // Copy by reference 
+    const obj1 = {myname : 'krish', mob : 'march'};
+    /*if the object contains 2 billion values , i cannot copy everything , so there's a thing called reference in js
+    console.log(obj1)
+    const obj2 = obj1 ; 
+    console.log(obj2) // takes eine Referenz 
+      // comparison of objects
+      console.log(obj1===obj2) // gleich referenz
+    const obj3 = { msg : 'hi' } ; 
+    console.log(obj3 === obj1) // vergleich weil die beide verschiedene refrenz haben. 
+
+    obj1.myname =' aman' ; // new value assigning
+    console.log(obj1)
+    console.log(obj2) // da referenz gleich sind  
+*/
+     // Destructuring of objects, to take out of objects
+    const {myname , mob} = obj1 ;
+    console.log(myname)
+    console.log(mob)  
+
+    // Short hand property ,  method
+    const obj3 = {
+     //  myname : myname 
+     myname ,  // shorthand property example
+
+     method (){
+      console.log('this is a method');   // short hand method example
+     }
+    };
+    console.log(obj3)
+    obj3.method()   
+ </script>
   </body>
 </html>
