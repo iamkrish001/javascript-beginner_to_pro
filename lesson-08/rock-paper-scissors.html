@@ -13,15 +13,15 @@
     <button onclick=" trackMyMove('scissors') ; ">Scissors</button>
     <button onclick=" reset(); ">Reset Score</button>
     <script>
-    
-      let score ={
+
+
+   
+      score = JSON.parse(localStorage.getItem('score')) || {
         wins:0,
         losses:0,
         ties:0
-      } ; 
-      
-       score = JSON.parse(localStorage.getItem('score')) // again changes to number using parse method
-
+      } ;  // uses default operator , or condition applied
+       // JSON's string is extracted first of all from local storage and JSON is again converted into object
 
       if(score === null){
        score ={
@@ -70,9 +70,8 @@
           score.ties++;
         }
         
-        localStorage.setItem('score',JSON.stringify(score)) // used to convert to string using stringify method
-   
-        
+
+        localStorage.setItem('score',JSON.stringify(score)) ;  // local storage only takes strings , that's why JSON.stringify 
         
         alert(
           `You picked ${myMove}, Computer picked ${computerMove} , ${result} , wins: ${score.wins}, losses : ${score.losses}, ties: ${score.ties} `
@@ -84,14 +83,17 @@
         score.wins = 0;
         score.ties = 0;
         localStorage.removeItem('score') ; 
-
-       
+        
+        
         alert(
           `wins: ${score.wins}, losses : ${score.losses}, ties: ${score.ties} `
-        );
+          );
       }
       function trackComputerMove() {
         // in order to track the computer move make a function with the conditions.  return computermove at last to know what the computer move is
+
+       
+        
 
         const result = "";
         let randomNum = Math.random();
