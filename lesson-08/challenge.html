@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin_flip_Game</title>
+  </head>
+  <body>
+    <button onclick="playGame('head')">heads</button>
+
+    <button onclick="playGame('tail')">tails</button>
+
+    <script>
+  
+function playGame(guess){
+    randomNum = Math.random() ;
+    let computerMove=  randomNum <
+     0.5 ?
+    'head' : 'tail' ; 
+     console.log(randomNum, computerMove)
+if(computerMove===guess){
+    console.log(`you won  ${guess} computer's move : ${computerMove}`)
+}
+else{
+    console.log(`you lost your guess: ${guess} computer's move : ${computerMove}`)
+}
+}
+ 
+
+     </script>
+  </body>
+</html>
