@@ -9,24 +9,26 @@
     <button onclick="playGame('head')">heads</button>
 
     <button onclick="playGame('tail')">tails</button>
-
-    <script>
-  
-function playGame(guess){
-    randomNum = Math.random() ;
-    let computerMove=  randomNum <
-     0.5 ?
+    
+    <script>  
+        let score = { wins:0 , losses:0} ; 
+        score = JSON.parse(localStorage.getItem('score'))
+      function playGame(guess){      
+        randomNum = Math.random() ;
+        let computerMove=  randomNum <
+        0.5 ?
     'head' : 'tail' ; 
-     console.log(randomNum, computerMove)
 if(computerMove===guess){
     console.log(`you won  ${guess} computer's move : ${computerMove}`)
-}
+    score.wins++ ;  
+  }
 else{
-    console.log(`you lost your guess: ${guess} computer's move : ${computerMove}`)
+  console.log(`you lost your guess: ${guess} computer's move : ${computerMove}`)
+   score.losses++ ;
+  }
+  localStorage.setItem('score', JSON.stringify(score))
+  console.log(score)
 }
-}
- 
-
      </script>
   </body>
 </html>
